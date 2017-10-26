@@ -20,7 +20,7 @@
 #import "MXSendMessageViewController.h"
 
 #import "MXCountryViewController.h"
-
+#import "MXXIBViewController.h"
 @interface MXMainViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *mainTableView;
 @end
@@ -61,7 +61,7 @@
 
 #pragma mark - 数据源
 - (NSMutableArray *)sourceArr {
-    return [@[@"缓存图片到本地", @"传值", @"省市县"] mutableCopy];
+    return [@[@"缓存图片到本地", @"传值", @"OpenUrl", @"xib创建视图"] mutableCopy];
 }
 
 #pragma mark - TableViewDataSource
@@ -101,6 +101,10 @@
         MXCountryViewController *countryVC = [[MXCountryViewController alloc] init];
         countryVC.titleStr = [self sourceArr][indexPath.row];
         [self.navigationController pushViewController:countryVC animated:YES];
+    }
+    if (indexPath.row == 3) {
+        MXXIBViewController *xibVC = [[MXXIBViewController alloc] initWithNibName:@"MXXIBViewController" bundle:nil];
+        [self.navigationController pushViewController:xibVC animated:YES];
     }
 }
 

@@ -10,6 +10,8 @@
 		D10F639F1EC82FF5006EBDD5 /* MXLoadImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D10F639E1EC82FF5006EBDD5 /* MXLoadImageViewController.m */; };
 		D10F63A21ED2939A006EBDD5 /* MXSendMessageSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D10F63A11ED2939A006EBDD5 /* MXSendMessageSecondViewController.m */; };
 		D10F63A61ED2A089006EBDD5 /* MXCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D10F63A51ED2A089006EBDD5 /* MXCountryViewController.m */; };
+		D10F63DF1EE7CD31006EBDD5 /* MXXIBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D10F63DE1EE7CD31006EBDD5 /* MXXIBViewController.m */; };
+		D10F63E11EE7CF21006EBDD5 /* MXXIBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D10F63E01EE7CF21006EBDD5 /* MXXIBViewController.xib */; };
 		D173B7071EB1B1DA003F94A6 /* MXSendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D173B7061EB1B1DA003F94A6 /* MXSendMessageViewController.m */; };
 		D1CD89831EADCA8B008014CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CD89821EADCA8B008014CE /* main.m */; };
 		D1CD89861EADCA8B008014CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CD89851EADCA8B008014CE /* AppDelegate.m */; };
@@ -37,6 +39,9 @@
 		D10F63A11ED2939A006EBDD5 /* MXSendMessageSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSendMessageSecondViewController.m; sourceTree = "<group>"; };
 		D10F63A41ED2A089006EBDD5 /* MXCountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCountryViewController.h; sourceTree = "<group>"; };
 		D10F63A51ED2A089006EBDD5 /* MXCountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCountryViewController.m; sourceTree = "<group>"; };
+		D10F63DD1EE7CD31006EBDD5 /* MXXIBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXXIBViewController.h; sourceTree = "<group>"; };
+		D10F63DE1EE7CD31006EBDD5 /* MXXIBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXXIBViewController.m; sourceTree = "<group>"; };
+		D10F63E01EE7CF21006EBDD5 /* MXXIBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXXIBViewController.xib; sourceTree = "<group>"; };
 		D173B7051EB1B1DA003F94A6 /* MXSendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSendMessageViewController.h; sourceTree = "<group>"; };
 		D173B7061EB1B1DA003F94A6 /* MXSendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSendMessageViewController.m; sourceTree = "<group>"; };
 		D1CD897E1EADCA8B008014CE /* MXReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +135,9 @@
 				D1CD89851EADCA8B008014CE /* AppDelegate.m */,
 				D1CD89A61EADCAEE008014CE /* MXMainViewController.h */,
 				D1CD89A71EADCAEE008014CE /* MXMainViewController.m */,
+				D10F63DD1EE7CD31006EBDD5 /* MXXIBViewController.h */,
+				D10F63DE1EE7CD31006EBDD5 /* MXXIBViewController.m */,
+				D10F63E01EE7CF21006EBDD5 /* MXXIBViewController.xib */,
 				D1CD898A1EADCA8B008014CE /* Main.storyboard */,
 				D1CD898D1EADCA8B008014CE /* Assets.xcassets */,
 				D1CD898F1EADCA8B008014CE /* LaunchScreen.storyboard */,
@@ -245,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D10F63E11EE7CF21006EBDD5 /* MXXIBViewController.xib in Resources */,
 				D1CD89911EADCA8B008014CE /* LaunchScreen.storyboard in Resources */,
 				D1CD898E1EADCA8B008014CE /* Assets.xcassets in Resources */,
 				D1CD898C1EADCA8B008014CE /* Main.storyboard in Resources */,
@@ -272,6 +281,7 @@
 				D1CD89831EADCA8B008014CE /* main.m in Sources */,
 				D173B7071EB1B1DA003F94A6 /* MXSendMessageViewController.m in Sources */,
 				D10F63A21ED2939A006EBDD5 /* MXSendMessageSecondViewController.m in Sources */,
+				D10F63DF1EE7CD31006EBDD5 /* MXXIBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
