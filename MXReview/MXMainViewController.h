@@ -10,4 +10,5 @@
 
 @interface MXMainViewController : UIViewController
 
+- (void)setContentInsetAdjustmentBehavior;
 @end

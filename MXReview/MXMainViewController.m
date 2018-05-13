@@ -6,6 +6,9 @@
 //  Copyright © 2017 马 霄. All rights reserved.
 //
 
+//-----------------------------------  iOS11适配  ------------------------------------
+#define is_iPhoneX [UIScreen mainScreen].bounds.size.width == 375.0f && [UIScreen mainScreen].bounds.size.height == 812.0f
+
 #define ROWHEIGHT 44
 
 #import "MXMainViewController.h"
@@ -21,6 +24,26 @@
 
 #import "MXCountryViewController.h"
 #import "MXXIBViewController.h"
+
+@interface MXBook : NSObject
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, assign) NSInteger pages;
+@property (nonatomic, strong) NSDate *publishDate;
+@end
+
+@implementation MXBook
+
+@end
+
+static void SimpleObjectExample() {
+    MXBook *book = [[MXBook alloc] init];
+    book.name = @"mx";
+    book.pages = 100;
+    book.publishDate = [NSDate date];
+    NSLog(@"%s ---- %@", __func__, book);
+}
+
+
 @interface MXMainViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *mainTableView;
 @end
@@ -32,18 +55,31 @@
     self.view.backgroundColor = [UIColor greenColor];
     // 设置导航条
     [self configNavigation];
+    if (is_iPhoneX == YES) {
+        [self viewSafeAreaInsetsDidChange];
+    }
     [self configUI];
+    SimpleObjectExample();
 }
 
 - (void)configNavigation {
-    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
-    UILabel *titleLabel = [[UILabel alloc] init];
-    titleLabel.text = @"主页";
-    [titleLabel sizeToFit];
-    titleLabel.textColor = [UIColor colorWithWhite:1 alpha:0];
-    self.navigationItem.titleView = titleLabel;
+//    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+//    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+//    UILabel *titleLabel = [[UILabel alloc] init];
+//    titleLabel.text = @"主页";
+//    [titleLabel sizeToFit];
+//    titleLabel.textColor = [UIColor colorWithWhite:1 alpha:0];
+//    self.navigationItem.titleView = titleLabel;
+    self.title = @"主页";
 }
+
+
+
+- (void)viewSafeAreaInsetsDidChange {
+    NSLog(@"%s", __func__);
+}
+
+
 
 - (void)configUI {
     self.mainTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
